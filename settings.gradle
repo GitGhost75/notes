@@ -1,1 +1,9 @@
 rootProject.name = 'notes'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            library('lombok','org.projectlombok', 'lombok').version('1.18.30')
+        }
+    }
+}

@@ -16,8 +16,13 @@ repositories {
 }
 
 dependencies {
+	compileOnly libs.lombok
+	annotationProcessor libs.lombok
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation libs.lombok
+
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
