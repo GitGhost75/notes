@@ -16,8 +16,16 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly libs.lombok
+	annotationProcessor libs.lombok
+
+	implementation libs.spring.boot.starter
+	implementation libs.spring.boot.starter.web
+	implementation libs.spring.boot.starter.security
+	implementation libs.lombok
+
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.3'
+
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
