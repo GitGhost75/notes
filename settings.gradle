@@ -3,7 +3,13 @@ rootProject.name = 'notes'
 dependencyResolutionManagement {
     versionCatalogs {
         libs {
+            version('spring-boot', '3.1.5')
+
             library('lombok','org.projectlombok', 'lombok').version('1.18.30')
+            library('spring-boot-starter', 'org.springframework.boot','spring-boot-starter-data-rest').versionRef('spring-boot')
+            library('spring-boot-starter-web', 'org.springframework.boot','spring-boot-starter-web').versionRef('spring-boot')
+            library('spring-boot-starter-security','org.springframework.boot','spring-boot-starter-security').versionRef('spring-boot')
+            library('org-jasypt-spring-boot-starter', 'com.github.ulisesbocchio', 'org-jasypt-spring-boot-starter').version {'3.0.5'}
         }
     }
 }
